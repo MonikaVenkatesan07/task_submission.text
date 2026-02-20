@@ -1,0 +1,142 @@
+----------SQL--------
+1. Database
+A database is an organized collection of data stored electronically for easy access and management.
+   RDBMS
+Relational Database Management System stores data in tables with rows and columns. Example: MySQL.
+   DBMS (NoSQL)
+Non-relational database that stores data in flexible formats like documents, key-value, graph.
+   MySQL
+MySQL is an open-source RDBMS used to manage relational databases using SQL.
+   SQL Syntax Rules
+SQL is case-insensitive
+Queries must end with semicolon (;)
+Keywords like SELECT, INSERT are written in uppercase 
+
+2. create Database training_db;
+use training_db;
+
+create table animals(
+  id int primary key,
+  name varchar(40),
+  age int,
+  is_pet boolean,
+  birth_date date
+);
+
+insert into animals values
+(1, 'Dog', 4, 'true', '2022-3-9'),
+(2, 'Cat', 2, 'true', '2023-9-16'),
+(3, 'Parrot', 5, 'false', '2024-2-18'),
+(4, 'Cow', 8, 'true', '2021-7-22'),
+(5, 'Puppy', 0, 'true', '2026-6-10'),
+
+select * from animals;
+
+update animals 
+set age=6 
+where id=4;
+
+delete from animals
+where id = 5;
+
+select * from animals where age>4;
+select * from animals where name = 'Dog'
+select * from animals age!= 5
+
+---------PYTHON----------
+
+# Single-line comment: This program demonstrates basic Python concepts
+
+"""
+Multi-line comment:
+This program shows:
+1. print()
+2. Variables
+3. Data types
+4. Type casting
+5. Operators
+
+"""
+
+# Printing output
+print("Welcome to Python Basics")
+
+# Variable declaration
+student_name = "Monika"
+age = 20
+height = 5.4
+is_student = True
+
+print("Name:", student_name)
+print("Age:", age)
+print("Height:", height)
+print("Student Status:", is_student)
+
+# -------Data Types----------
+
+# int
+num1 = 10
+num2 = 5
+print("Addition:", num1 + num2)
+
+# float
+price = 99.5
+tax = 10.5
+print("Total Price:", price + tax)
+
+# string (concatenation)
+first = "Hello"
+second = "World"
+print(first + " " + second)
+
+# boolean
+is_active = True
+print("Is Active:", is_active)
+
+# -------Type Casting---------
+
+a = "100"
+print("String:", a)
+print("Convert to int:", int(a))
+
+b = 10
+print("Convert to float:", float(b))
+
+c = 25
+print("Convert to string:", str(c))
+
+d = 0
+print("Convert to bool:", bool(d))  # False
+
+# ---------Operators----------
+
+x = 10
+y = 3
+
+# Arithmetic
+print("Addition:", x + y)
+print("Subtraction:", x - y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+print("Modulus:", x % y)
+
+# Comparison
+print("x > y:", x > y)
+print("x == y:", x == y)
+
+# Logical
+print("x > 5 and y < 5:", x > 5 and y < 5)
+
+# Assignment
+z = 5
+z += 3
+print("Assignment (+=):", z)
+
+# Bitwise
+print("Bitwise AND:", x & y)
+print("Bitwise OR:", x | y)
+
+# Explanation:
+# ~n = -(n + 1)
+n = 5
+print("~5 =", ~n)  # Output = -6
